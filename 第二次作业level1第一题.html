@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var arr = ['ABCDEEF,GHJKKM'],count=0,arr1=[];
+        function recur(code){
+                for(var i = 0; i<code.toString().length ; i++)
+                {
+                    for(var j = i+1 ; j<code.toString().length ; j++)
+                    {
+                        c = code.toString().substring(i,i+1);
+                        d = code.toString().substring(j,j+1);
+                        if(c == d)
+                        {
+                            count++;
+                            arr1.push(c+d);
+                            if(count==2) {
+                                return arr1;
+                            }         
+                        }
+                    }
+                }
+        }
+        console.log(recur(arr));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

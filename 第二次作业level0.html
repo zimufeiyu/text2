@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var str = "today is a happy day",b;
+        /*b=str.replace(/\b\w+\b/g,function change(a){
+            return a.substring(0,1).toUpperCase()+a.substring(1);
+        }
+        );*/  //这是从网上搜的答案，但是我没有搞懂那个“/\b\w+\b/g” 是什么东西，下面的方法是我自己硬凑出来的，用substring挨个检索出来每个单词首字母转为大写
+        function change(a){
+            c=a.substring(0,1).toUpperCase()+a.substring(1,6)+a.substring(6,7).toUpperCase()+a.substring(7,9)+a.substring(9,10).toUpperCase()+a.substring(10,11)+a.substring(11,12).toUpperCase()+a.substring(12,17)+a.substring(17,18).toUpperCase()+a.substring(18);
+            return c;
+        }
+        b= change(str);
+        console.log(b);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

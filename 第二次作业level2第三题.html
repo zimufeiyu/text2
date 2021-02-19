@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1(a)
+        {
+            return function(b,c){
+                var value1 = b[a];
+                var value2 = c[a];
+                return value1 - value2; //返回值为负，排序后的数组中value1应该出现在value2的前面，返回值为正，value1会出现在value2后面，返回值为0则位置不变
+            }
+            
+        }
+        let arr = [{id:10,name:'kc'},{id:8,name:'hy'},{id:15,name:'pipi'},{id:2,name:'mama'}];
+        console.log(arr.sort(fun1('id')));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
